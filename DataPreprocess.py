@@ -32,13 +32,13 @@ def read_cora(content_path="./cora/cora.content", cites_path="./cora/cora.cites"
     adj = adj.tocsr()
 
     print("Before GC:", adj.shape, "nnz =", adj.nnz)
-    n_comp, labels = connected_components(adj)
-    giant = np.argmax(np.bincount(labels))
-    keep = np.where(labels == giant)[0]
+    # n_comp, labels = connected_components(adj)
+    # giant = np.argmax(np.bincount(labels))
+    # keep = np.where(labels == giant)[0]
 
-    adj = adj[keep][:, keep].tocsr()
-    n = adj.shape[0]
-    print("After GC:", adj.shape, "nnz =", adj.nnz)
+    # adj = adj[keep][:, keep].tocsr()
+    # n = adj.shape[0]
+    # print("After GC:", adj.shape, "nnz =", adj.nnz)
     
     mean_deg = adj.sum(axis=1).A1.mean()
     print("Mean degree =", mean_deg)
