@@ -1,2 +1,2 @@
 # **Reproduction and Extension**
-# **Paper: Node Embeddings and Exact Low-Rank Representations of Complex Networks**
+Paper: Node Embeddings and Exact Low-Rank Representations of Complex Networks
